@@ -1,0 +1,17 @@
+<p>
+  login works!
+</p>
+
+<div>
+  <div>
+    <input [(ngModel)]="usuario.nome" type="text" id="usuario">
+    <label for="usuario">Usuário</label>
+  </div>
+
+  <div>
+    <input [(ngModel)]="usuario.senha" type="password" id="senha">
+    <label for="senha">Senha</label>
+  </div>
+
+  <button type="submit" name="action" (click)="fazerLogin()">Logar</button>
+</div>

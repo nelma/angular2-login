@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<ul *ngIf="mostrarMenu">
+  <li><a routerLink="">Login</a></li>
+  <li><a routerLink="list-ads">Listas de Ads</a></li>
+</ul>
+<router-outlet></router-outlet>
