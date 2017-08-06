@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -20,7 +21,7 @@ import { AuthService } from './login/auth.service';
     FormsModule,
     routing
   ],
-  providers: [ AuthService ],
+  providers: [ AuthService, AuthGuard ], //escopo global
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

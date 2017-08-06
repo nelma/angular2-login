@@ -1,11 +1,15 @@
+import { AuthGuard } from './guards/auth.guard';
 import { ModuleWithProviders } from '@angular/core';
 import { LoginComponent } from './login/login.component';
 import { ListAdsComponent } from './list-ads/list-ads.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const APP_ROUTES: Routes = [
+
+    //canActivate aplica as guardas de rota
+
     {path: '', component: LoginComponent},
-    {path: 'list-ads', component: ListAdsComponent},
+    {path: 'list-ads', component: ListAdsComponent, canActivate: [AuthGuard]},
     {path: '**', redirectTo: ''}
 ]
 
